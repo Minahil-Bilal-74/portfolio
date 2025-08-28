@@ -150,26 +150,28 @@
 </head>
 <body class="bg-light text-light">
     <!-- Header/Navigation -->
-    <header class="fixed w-full bg-black  shadow-md z-50">
-        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
-           
-            <img src="pics/mb.png" alt="logo pic" class=" h-10">
-             <a href="#" class="text-2xl font-bold text-white">minahilbilal74@gmail.com</a>
-            <nav class="hidden md:flex space-x-10">
-                <a href="#home" class="hover:text-primary transition">Home</a>
-                <a href="#services" class="hover:text-primary transition">Services</a>
-                <a href="#portfolio" class="hover:text-primary transition">Portfolio</a>
-                <a href="#skills" class="hover:text-primary transition">Skills</a>
-                <a href="#blogs" class="hover:text-primary transition">Blogs</a>
-                <a href="#contact" class="hover:text-primary transition">Contact</a>
-                 <a href="#contact" class="border border-primary text-primary px-2 py-2 rounded-md hover:bg-[#170C24]-transition">Hire Me</a>
-            </nav>
-            
-            <button class="md:hidden text-primary">
-                <i class="fas fa-bars text-xl"></i>
-            </button>
-        </div>
-    </header>
+  <header class="fixed w-full bg-black shadow-md z-50">
+  <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-center md:justify-between space-y-4 md:space-y-0">
+    
+    <!-- Logo + Email -->
+    <div class="flex items-center space-x-4">
+      <img src="pics/mb.png" alt="logo pic" class="h-10">
+      <a href="#" class="text-2xl font-bold text-white">minahilbilal74@gmail.com</a>
+    </div>
+
+    <!-- Navigation (Always visible) -->
+    <nav class="flex flex-wrap justify-center space-x-4 md:space-x-6 text-white">
+      <a href="#home" class="hover:text-primary transition">Home</a>
+      <a href="#services" class="hover:text-primary transition">Services</a>
+      <a href="#portfolio" class="hover:text-primary transition">Portfolio</a>
+      <a href="#skills" class="hover:text-primary transition">Skills</a>
+      <a href="#blogs" class="hover:text-primary transition">Blogs</a>
+      <a href="#contact" class="hover:text-primary transition">Contact</a>
+      <a href="#contact" class="border border-primary text-primary px-3 py-2 rounded-md hover:bg-[#170C24] transition">Hire Me</a>
+    </nav>
+    
+  </div>
+</header>
 
     <!-- Hero Section--> 
 <section id="home" class="pt-32 pb-20 bg-gradient-to-r from-[#170C24] to-[#261540] animate-[fadeIn_2s_forwards] delay-2000">
@@ -724,7 +726,7 @@
 
   
   <!-- Contact Information  -->
-  <div class="w-full md:w-1/3">
+  <div class="w-full md:w-1/3 p-20">
     <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
     
     <div class="space-y-6 ">
@@ -781,11 +783,11 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pl-8">
       <div>
         <label for="firstName" class="block mb-1 font-medium text-sm">First Name</label>
-        <input type="text" id="firstName" class="w-full md:w-1/2 px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm">
+        <input type="text" id="firstName" class="w-full md:w-1/2 px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
       </div>
       <div>
         <label for="lastName" class="block mb-1 font-medium text-sm">Last Name</label>
-        <input type="text" id="lastName" class="w-full md:w-1/2 px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm">
+        <input type="text" id="lastName" class="w-full md:w-1/2 px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
       </div>
     </div>
 
@@ -793,19 +795,19 @@
     <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pl-8">
       <div>
         <label for="email" class="block mb-1 font-medium text-sm">Email Address</label>
-        <input type="text" id="email" class="w-full md:w-1/2 px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm">
+        <input type="text" id="email" class="w-full md:w-1/2 px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
       </div>
       <div>
         <label for="phone" class="block mb-1 font-medium text-sm">Phone Number</label>
-        <input type="tel" id="phone" class="w-full md:w-1/2 px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm">
+        <input type="tel" id="phone" class="w-full md:w-1/2 px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
       </div>
     </div>
     </div>
 
     <!-- Service -->
-    <div class="pl-8">
+   <div class="pl-8">
       <label for="service" class="block mb-1 font-medium text-sm ">Choose Service</label>
-      <select id="service" class="w-1/2 px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-sm">
+      <select id="service" class="w-1/2 px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
         <option value="">Select a service</option>
         <option value="design">UI/UX Design</option>
         <option value="development">Web Development</option>
@@ -988,6 +990,7 @@ window.addEventListener("DOMContentLoaded", () => {
     </script>
 </body>
 </html>
+
 
 
 
