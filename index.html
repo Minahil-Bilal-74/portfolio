@@ -8,7 +8,7 @@
     <title>Minahil - Web Developer & Designer</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="icon" type="image/png" href="pics/mb.png"/>
+    <link rel="icon" type="image/png" href="/pics/mb.png"/>
     <script>
    
 
@@ -147,91 +147,120 @@
             transform: scale(1);
         }
     </style>
-</head>
-<body class="bg-light text-light">
-    <!-- Header/Navigation -->
-  <header class="fixed w-full bg-black shadow-md z-50">
-  <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-center md:justify-between space-y-4 md:space-y-0">
+<!-- Header -->
+<header class="fixed w-full bg-black shadow-md z-50">
+  <div class="container mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between">
     
     <!-- Logo + Email -->
-    <div class="flex items-center space-x-4">
-      <img src="pics/mb.png" alt="logo pic" class="h-10">
-      <a href="#" class="text-2xl font-bold text-white">minahilbilal74@gmail.com</a>
+    <div class="w-full flex items-center justify-between">
+      <div class="flex items-center space-x-4">
+        <img src="pics/mb.png" alt="logo pic" class="h-10">
+        <a href="#" class="text-xl font-bold text-white hidden sm:inline">minahilbilal74@gmail.com</a>
+      </div>
+
+      <!-- Mobile Toggle Button -->
+      <button id="menuToggle" class="md:hidden text-white focus:outline-none text-2xl">
+        <i class="fas fa-bars"></i>
+      </button>
     </div>
 
-    <!-- Navigation (Always visible) -->
-    <nav class="flex flex-wrap justify-center space-x-4 md:space-x-6 text-white">
-      <a href="#home" class="hover:text-primary transition">Home</a>
-      <a href="#services" class="hover:text-primary transition">Services</a>
-      <a href="#portfolio" class="hover:text-primary transition">Portfolio</a>
-      <a href="#skills" class="hover:text-primary transition">Skills</a>
-      <a href="#blogs" class="hover:text-primary transition">Blogs</a>
-      <a href="#contact" class="hover:text-primary transition">Contact</a>
-      <a href="#contact" class="border border-primary text-primary px-3 py-2 rounded-md hover:bg-[#170C24] transition">Hire Me</a>
+    <!-- Navigation -->
+    <nav id="mobileMenu" class="hidden w-full mt-4 md:mt-0 md:flex md:items-center md:space-x-6 text-white flex-col md:flex-row space-y-4 md:space-y-0">
+      <a href="#home" class="hover:text-purple-500 transition">Home</a>
+      <a href="#services" class="hover:text-purple-500 transition">Services</a>
+      <a href="#portfolio" class="hover:text-purple-500 transition">Portfolio</a>
+      <a href="#skills" class="hover:text-purple-500 transition">Skills</a>
+      <a href="#blogs" class="hover:text-purple-500 transition">Blogs</a>
+      <a href="#contact" class="hover:text-purple-500 transition">Contact</a>
+      <a href="#contact" class="border border-purple-500 text-purple-500 px-3 py-2 rounded-md hover:bg-[#170C24] transition">Hire Me</a>
     </nav>
-    
   </div>
 </header>
 
+<!-- Toggle Script -->
+<script>
+  const menuToggle = document.getElementById('menuToggle');
+  const mobileMenu = document.getElementById('mobileMenu');
+
+  menuToggle.addEventListener('click', () => {
+    mobileMenu.classList.toggle('hidden');
+  });
+</script> 
+
+
     <!-- Hero Section--> 
-<section id="home" class="pt-32 pb-20 bg-gradient-to-r from-[#170C24] to-[#261540] animate-[fadeIn_2s_forwards] delay-2000">
-        <div class="container relative mx-auto px-6 flex flex-col md:flex-row items-center">
-            <div class="absolute inset-0 flex items-center justify-center text-12xl text-7xl opacity-50 animate-bounce">
-               
-  <span class="text-outline text-12xl ">HI</span>
 
+<section id="home" class="pt-40 md:pt-32 pb-20 bg-gradient-to-r from-[#170C24] to-[#261540] animate-[fadeIn_2s_forwards] delay-2000">
+  <div class="container relative mx-auto px-6 flex flex-col md:flex-row items-center">
+    
+    <!-- Background "HI" text -->
+    <div class="absolute inset-0 flex items-center justify-center text-7xl md:text-[12rem] opacity-10 animate-bounce select-none pointer-events-none">
+      <span class="text-outline text-7xl md:text-[12rem]">HI</span>
+    </div>
 
-</div>
-           
-
-
-            <div class="md:w-1/2 mb-10 md:mb-0 relative z-0">
-                <h4 class="text-4xl text-white font-semibold mb-2 s-24">I am Minahil</h4>
-                <h3 class="text-7xl text-bold text-secondary pt-2 mb-6 bg-gradient-to-r from-purple-600 to-[#FFFF] bg-clip-text text-transparent">Next-Level Web Developer</h3>
-                <p class="text-white mb-8 max-w-md text-1xl ">I break down complex user experience problems to create integrity focussed solutions that connect billions of people.</p>
-                <div class="flex space-x-4">
-                    <button class=" border-[1px] border-purple-600 p-4 pl-8 pr-8  rounded-full text-purple-600 hover:bg-purple-600 hover:text-white transition  " onclick="downloadFile('pics/CV.jpg')">Download CV <i class="fa fa-download" aria-hidden="true" ></i></button>
-                   <button class="w-10 h-10 flex justify-center items-center border-[1px] border-purple-600 text-purple-600 mt-2 rounded-full hover:bg-purple-600 hover:text-white transition"><i class="fab fa-twitter"></i></button>
-                  <button class="w-10 h-10 flex justify-center items-center border-[1px] border-purple-600 text-purple-600 mt-2 rounded-full hover:bg-purple-600 hover:text-white transition"> <i class="fab fa-instagram"></i></button>
-                  <button class="w-10 h-10 flex justify-center items-center border-[1px] border-purple-600 text-purple-600 mt-2 rounded-full hover:bg-purple-600 hover:text-white transition"><i class="fab fa-linkedin-in"></i></button>
-                  <button class="w-10 h-10 flex justify-center items-center border-[1px] border-purple-600 text-purple-600 mt-2 rounded-full hover:bg-purple-600 hover:text-white transition"><i class="fab fa-facebook-f"></i></button>
-                   
-                </div>
-            </div>
-            <div class="md:w-1/2 w-full overflow-hidden rounded-2xl p-4 flex justify-center md:justify-end">
-
-               <img 
-                   src="pics/minahil.jpg" 
-                   alt="Minahil"
-                   class="w-full max-w-[300px] h-auto hover:border-primary-color animated-image transition-transform duration-500 rotate-[2deg]"
-                >
-
-            </div>
-    </section>
-
-  
-  <section id="home1" class="pt-4 pb-2 bg-gradient-to-r from-[#170C24] to-[#261540]">
-  <div class="md:w-[100%] flex justify-center align-linear p-4">
-    <div class="flex flex-wrap justify-center gap-4">
-      <div class="p-6 ml-4 rounded-lg shadow-md text-center w-full  md:w-[45%] lg:w-[20%] flex align-linear ">
-    <span class="text-7xl font-bold text-white">1 </span>
-    <p class="text-white mt-2 pl-4">Years of Experience</p>
-  </div>
-      <div class=" p-6 ml-4 rounded-lg shadow-md text-center w-[45%] md:w-[40%] lg:w-[20%] flex align-linear">
-        <span class="text-7xl font-semibold text-white">10+</span>
-        <p class="text-white mt-2 pl-4">Projects Completed</p>
+    <!-- Text Content -->
+    <div class="md:w-1/2 mb-10 md:mb-0 relative z-10 text-center md:text-left">
+      <h4 class="text-4xl text-white font-semibold mb-2">I am Minahil</h4>
+      <h3 class="text-5xl md:text-7xl font-bold bg-gradient-to-r from-purple-600 to-white bg-clip-text text-transparent pt-2 mb-6">
+        Next-Level Web Developer
+      </h3>
+      <p class="text-white mb-8 max-w-md mx-auto md:mx-0 text-lg">
+        I break down complex user experience problems to create integrity focussed solutions that connect billions of people.
+      </p>
+      <div class="flex flex-wrap justify-center md:justify-start space-x-4">
+        <button class="border border-purple-600 p-4 px-8 rounded-full text-purple-600 hover:bg-purple-600 hover:text-white transition" onclick="downloadFile('pics/CV.jpg')">
+          Download CV <i class="fa fa-download" aria-hidden="true"></i>
+        </button>
+        <button class="w-10 h-10 flex justify-center items-center border border-purple-600 text-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition mt-2 md:mt-0"><i class="fab fa-twitter"></i></button>
+        <button class="w-10 h-10 flex justify-center items-center border border-purple-600 text-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition mt-2 md:mt-0"><i class="fab fa-instagram"></i></button>
+        <button class="w-10 h-10 flex justify-center items-center border border-purple-600 text-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition mt-2 md:mt-0"><i class="fab fa-linkedin-in"></i></button>
+        <button class="w-10 h-10 flex justify-center items-center border border-purple-600 text-purple-600 rounded-full hover:bg-purple-600 hover:text-white transition mt-2 md:mt-0"><i class="fab fa-facebook-f"></i></button>
       </div>
-      <div class=" p-6 ml-4 rounded-lg shadow-md text-center w-[45%] md:w-[40%] lg:w-[20%] flex align-linear">
-        <span class="text-7xl font-bold text-white">1k+</span>
-        <p class="text-white mt-2 pl-4">Happy Clients</p>
-      </div>
-      <div class=" p-6 rounded-lg ml-4 shadow-md text-center w-[45%] md:w-[40%] lg:w-[20%] flex align-linear">
-        <span class="text-7xl font-bold text-white">1</span>
-        <p class="text-white mt-2 pl-4">Years of Experience</p>
-      </div>
+    </div>
+
+    <!-- Image -->
+    <div class="md:w-1/2 w-full overflow-hidden rounded-2xl p-4 flex justify-center md:justify-end relative z-10">
+      <img 
+        src="pics/minahil.jpg" 
+        alt="Minahil"
+        class="w-full max-w-[300px] h-auto hover:border-primary-color transition-transform duration-500 rotate-[2deg]"
+      >
     </div>
   </div>
 </section>
+
+<section id="home1" class="pt-8 pb-4 bg-gradient-to-r from-[#170C24] to-[#261540]">
+  <div class="container mx-auto px-6">
+    <div class="flex flex-wrap justify-center gap-6">
+
+      <!-- Card 1 -->
+      <div class="w-full sm:w-[80%] md:w-[45%] lg:w-[22%] bg-[#1f1230] rounded-lg shadow-md p-6 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
+        <span class="text-5xl sm:text-6xl font-bold text-white">1</span>
+        <p class="text-white sm:pl-4 mt-2 sm:mt-0 text-sm sm:text-base">Years of Experience</p>
+      </div>
+
+      <!-- Card 2 -->
+      <div class="w-full sm:w-[80%] md:w-[45%] lg:w-[22%] bg-[#1f1230] rounded-lg shadow-md p-6 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
+        <span class="text-5xl sm:text-6xl font-semibold text-white">10+</span>
+        <p class="text-white sm:pl-4 mt-2 sm:mt-0 text-sm sm:text-base">Projects Completed</p>
+      </div>
+
+      <!-- Card 3 -->
+      <div class="w-full sm:w-[80%] md:w-[45%] lg:w-[22%] bg-[#1f1230] rounded-lg shadow-md p-6 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
+        <span class="text-5xl sm:text-6xl font-bold text-white">1k+</span>
+        <p class="text-white sm:pl-4 mt-2 sm:mt-0 text-sm sm:text-base">Happy Clients</p>
+      </div>
+
+      <!-- Card 4 -->
+      <div class="w-full sm:w-[80%] md:w-[45%] lg:w-[22%] bg-[#1f1230] rounded-lg shadow-md p-6 flex flex-col sm:flex-row items-center sm:items-start text-center sm:text-left">
+        <span class="text-5xl sm:text-6xl font-bold text-white">1</span>
+        <p class="text-white sm:pl-4 mt-2 sm:mt-0 text-sm sm:text-base">Years of Experience</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
 <!-- Services Section -->
     <section id="services" class="py-20 bg-black ">
         <div class="container mx-auto px-6">
@@ -286,7 +315,7 @@
 <section id="portfolio" class="py bg-gradient-to-r from-[#170C24] to-[#261540]">
   <div class="container mx-auto px-6">
     <div class="text-center mb-16">
-      <h2 class="text-4xl font-bold mb-4 p-20 text-white">My Recent Works</h2>
+      <h2 class="text-4xl font-bold mb-4 p-8">My Recent Works</h2>
       <p class="text-secondary max-w-2xl mx-auto text-gray-300">
         We put your ideas and thus your wishes in the form of a unique web project that inspires you and your customers.
       </p>
@@ -303,7 +332,7 @@
       </div>
     </div>
     <!-- Portfolio Items Grid -->
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-x-8 gap-y-2">
 
       <!-- Portfolio Item 1 (Branding) -->
       <div class="max-w-md mx-auto relative group border-t-[32px] border-l-[32px] border-r-[32px] border-black overflow-hidden shadow-md" data-category="branding">
@@ -397,76 +426,78 @@
   </div>
 </section>
 
-<section id="experience" class="py-20 bg-black scroll-mt-24">
-  <div class="max-w-7xl mx-auto px-4">
+
+
+    <section id="experience" class="py-20 bg-black scroll-mt-24">
+  <div class="container mx-auto px-6">
     <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+
       <!-- Experience Column -->
-      <div class="mr-10">
-        <div class="flex flex-col md:flex-row items-center gap-4">
-          <i class="fas fa-medal mb-8 text-5xl bg-gradient-to-r from-purple-600 to-[#FFFF] bg-clip-text text-transparent" aria-hidden="true"></i>
-          <h3 class="font-bold mb-8 text-6xl bg-gradient-to-r from-purple-600 to-[#FFFF] bg-clip-text text-transparent">Experience</h3>
+      <div>
+        <div class="flex items-center gap-4 mb-8">
+          <i class="fas fa-medal text-4xl sm:text-5xl bg-gradient-to-r from-purple-600 to-white bg-clip-text text-transparent"></i>
+          <h3 class="font-bold text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-purple-600 to-white bg-clip-text text-transparent">
+            Experience
+          </h3>
         </div>
-        
+
         <!-- Experience Items -->
-        <div class="relative animate-[fadeIn_2s_forwards]">
-          <div class="mb-12 bg-gradient-to-r p-6 rounded-lg from-[#170C24] to-[#261540] mode hover:bg-gradient-to-r hover:from-purple-600 hover:to-[#FFFF]">
-            <span class="text-purple-600 text-sm font-bold rounded">2025- Present</span>
-            <h4 class="text-2xl font-bold text-white mb-2">Internship</h4>
-            <p class="text-secondary font-medium text-white mb-2">DYNSOF</p>
+        <div class="space-y-6">
+          <div class="p-6 rounded-lg bg-gradient-to-r from-[#170C24] to-[#261540] hover:from-purple-600 hover:to-white">
+            <span class="text-purple-600 text-sm font-bold">2025 - Present</span>
+            <h4 class="text-2xl font-bold text-white mb-1">Internship</h4>
+            <p class="text-white font-medium">DYNSOF</p>
           </div>
-        </div>
 
-        <div class="relative">
-          <div class="mb-12 bg-gradient-to-r p-6 rounded-lg from-[#170C24] to-[#261540] mode hover:bg-gradient-to-r hover:from-purple-600 hover:to-[#FFFF]">
-            <span class="text-purple-600 text-sm font-bold rounded">2023-2024</span>
-            <h4 class="text-2xl font-bold text-white mb-2">Web Design Course</h4>
-            <p class="text-secondary font-medium mb-2">GGCP</p>
+          <div class="p-6 rounded-lg bg-gradient-to-r from-[#170C24] to-[#261540] hover:from-purple-600 hover:to-white">
+            <span class="text-purple-600 text-sm font-bold">2023 - 2024</span>
+            <h4 class="text-2xl font-bold text-white mb-1">Web Design Course</h4>
+            <p class="text-white font-medium">GGCP</p>
           </div>
-        </div>
 
-        <div class="relative">
-          <div class="mb-12 bg-gradient-to-r p-6 rounded-lg from-[#170C24] to-[#261540] mode hover:bg-gradient-to-r hover:from-purple-600 hover:to-[#FFFF]">
-            <span class="text-purple-600 text-sm font-bold rounded">2020-2021</span>
-            <h4 class="text-2xl font-bold text-white mb-2">MS Office</h4>
-            <p class="text-secondary font-medium mb-2">Punjab College</p>
+          <div class="p-6 rounded-lg bg-gradient-to-r from-[#170C24] to-[#261540] hover:from-purple-600 hover:to-white">
+            <span class="text-purple-600 text-sm font-bold">2020 - 2021</span>
+            <h4 class="text-2xl font-bold text-white mb-1">MS Office</h4>
+            <p class="text-white font-medium">Punjab College</p>
           </div>
         </div>
       </div>
 
       <!-- Education Column -->
-      <div class="lg:ml-30">
-        <div class="flex display-inline">
-          <i class="fa fa-graduation-cap mb-8 text-5xl bg-gradient-to-r from-purple-600 to-[#FFFF] bg-clip-text text-transparent" aria-hidden="true"></i>
-          <h3 class="font-bold mb-8 text-6xl bg-gradient-to-r from-purple-600 to-[#FFFF] bg-clip-text text-transparent">Education</h3>
+      <div>
+        <div class="flex items-center gap-4 mb-8">
+          <i class="fa fa-graduation-cap text-4xl sm:text-5xl bg-gradient-to-r from-purple-600 to-white bg-clip-text text-transparent"></i>
+          <h3 class="font-bold text-4xl sm:text-5xl md:text-6xl bg-gradient-to-r from-purple-600 to-white bg-clip-text text-transparent">
+            Education
+          </h3>
         </div>
 
-        <div class="relative">
-          <div class="mb-12 bg-gradient-to-r p-6 mode rounded-lg from-[#170C24] to-[#261540] hover:bg-gradient-to-r hover:from-purple-600 hover:to-[#FFFF]">
-            <span class="text-purple-600 text-sm font-bold rounded">2022 - 2026</span>
-            <h4 class="text-xl font-semibold mb-2">BS-CS</h4>
-            <p class="text-2xl font-bold text-white mb-2">Govt. Graduate College, Pasrur</p>
+        <!-- Education Items -->
+        <div class="space-y-6">
+          <div class="p-6 rounded-lg bg-gradient-to-r from-[#170C24] to-[#261540] hover:from-purple-600 hover:to-white">
+            <span class="text-purple-600 text-sm font-bold">2022 - 2026</span>
+            <h4 class="text-xl font-semibold text-white mb-1">BS-CS</h4>
+            <p class="text-white font-bold text-lg">Govt. Graduate College, Pasrur</p>
           </div>
-        </div>
 
-        <div class="relative">
-          <div class="mb-12 bg-gradient-to-r p-6 mode rounded-lg from-[#170C24] to-[#261540] hover:bg-gradient-to-r hover:from-purple-600 hover:to-[#FFFF]">
-            <span class="text-purple-600 text-sm font-bold rounded">2020 - 2022</span>
-            <h4 class="text-2xl font-bold text-white mb-2">ICS (Phy)</h4>
-            <p class="text-secondary font-medium mb-2">Superior College, Pasrur</p>
+          <div class="p-6 rounded-lg bg-gradient-to-r from-[#170C24] to-[#261540] hover:from-purple-600 hover:to-white">
+            <span class="text-purple-600 text-sm font-bold">2020 - 2022</span>
+            <h4 class="text-2xl font-bold text-white mb-1">ICS (Phy)</h4>
+            <p class="text-white font-medium">Superior College, Pasrur</p>
           </div>
-        </div>
 
-        <div class="relative">
-          <div class="mb-12 bg-gradient-to-r p-6 mode rounded-lg from-[#170C24] to-[#261540] hover:bg-gradient-to-r hover:from-purple-600 hover:to-[#FFFF]">
-            <span class="text-purple-600 text-sm font-bold rounded">2018 - 2020</span>
-            <h4 class="text-2xl font-bold text-white mb-2">Matric</h4>
-            <p class="text-secondary font-medium mb-2">Govt. Girls High School, Pasrur</p>
+          <div class="p-6 rounded-lg bg-gradient-to-r from-[#170C24] to-[#261540] hover:from-purple-600 hover:to-white">
+            <span class="text-purple-600 text-sm font-bold">2018 - 2020</span>
+            <h4 class="text-2xl font-bold text-white mb-1">Matric</h4>
+            <p class="text-white font-medium">Govt. Girls High School, Pasrur</p>
           </div>
         </div>
       </div>
+
     </div>
   </div>
 </section>
+
 
 <section id="skills" class="py-20 bg-gradient-to-r from-[#170C24] to-[#261540]">
   <div class="container mx-auto px-6">
@@ -484,38 +515,38 @@
       
       <!-- Skill 1 -->
      <div class="w-28 h-28 flex flex-col items-center">
-  <img src="pics/hhhh.png" 
+  <img src="/pics/hhhh.png" 
        alt="Figma" 
        class="w-20 object-contain transition duration-300 ease-in-out transform hover:scale-110 brightness-50 hover:brightness-100">
   <span class="mt-2 text-primary font-bold">80%</span>
 </div>
       <!-- Skill 2 -->
       <div class="w-28 h-28 flex flex-col items-center">
-        <img src="pics/sketch.png" alt="Sketch" class="w-20 object-contain transition duration-300 ease-in-out transform hover:scale-110 brightness-50 hover:brightness-100">
+        <img src="/pics/sketch.png" alt="Sketch" class="w-20 object-contain transition duration-300 ease-in-out transform hover:scale-110 brightness-50 hover:brightness-100">
         <span class="mt-2 text-primary font-bold">85%</span>
       </div>
 
       <!-- Skill 3 -->
       <div class="w-28 h-28 flex flex-col items-center">
-        <img src="pics/xd.png" alt="Adobe XD" class="w-20  object-contain transition duration-300 ease-in-out transform hover:scale-110 brightness-50 hover:brightness-100">
+        <img src="/pics/xd.png" alt="Adobe XD" class="w-20  object-contain transition duration-300 ease-in-out transform hover:scale-110 brightness-50 hover:brightness-100">
         <span class="mt-2 text-primary font-bold">99%</span>
       </div>
 
       <!-- Skill 4 -->
       <div class="w-28 h-28 flex flex-col items-center">
-        <img src="pics/wordf.png" alt="WordPress" class="w-20  object-contain transition duration-300 ease-in-out transform hover:scale-110 brightness-50 hover:brightness-100">
+        <img src="/pics/wordf.png" alt="WordPress" class="w-20  object-contain transition duration-300 ease-in-out transform hover:scale-110 brightness-50 hover:brightness-100">
         <span class="mt-2 text-primary font-bold">89%</span>
       </div>
 
       <!-- Skill 5 -->
       <div class="w-28 h-28 flex flex-col items-center">
-        <img src="pics/react.png" alt="React" class="w-20  object-contain transition duration-300 ease-in-out transform hover:scale-110 brightness-50 hover:brightness-100">
+        <img src="/pics/react.png" alt="React" class="w-20  object-contain transition duration-300 ease-in-out transform hover:scale-110 brightness-50 hover:brightness-100">
         <span class="mt-2 text-primary font-bold">95%</span>
       </div>
 
       <!-- Skill 6 -->
       <div class="w-28 h-28 flex flex-col items-center">
-        <img src="pics/js.png" alt="JavaScript" class="w-20 object-contain transition duration-300 ease-in-out transform hover:scale-110 brightness-50 hover:brightness-100">
+        <img src="/pics/js.png" alt="JavaScript" class="w-20 object-contain transition duration-300 ease-in-out transform hover:scale-110 brightness-50 hover:brightness-100">
         <span class="mt-2 text-primary font-bold">92%</span>
       </div>
 
@@ -523,128 +554,124 @@
   </div>
 </section>
  <!--testmonial-->
+<!-- Testimonials Section -->
 <section class="py-16 bg-black">
-  <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 gap-12 items-start">
- 
+  <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row gap-12">
     
-    <!-- Left Side Content -->
-    <div>
-      <h2 class="text-4xl font-extrabold text-purple-300 mb-4">
+    <!-- Left Text Content -->
+    <div class="md:w-1/2">
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-purple-300 mb-4">
         My Client's Stories
       </h2>
-      <p class="text-black-600 text-lg leading-relaxed">
-        Empowering people in new a digital journey with my super services
+      <p class="text-white/80 text-base sm:text-lg leading-relaxed">
+        Empowering people in a new digital journey with my super services.
       </p>
     </div>
 
-    <!-- My client Story -->
-    <div class="relative " >
-      <div id="testimonialSlider" class="overflow-hidden relative">
-        <div class="flex transition-transform duration-500 ease-in-out" id="sliderTrack">
-          
-          <!-- Group 1 (Slide 1) -->
-           
-            <div class="w-full h-80 grid grid-cols-1 md:grid-cols-2 gap-6 flex-shrink-0 px-2 ">
+    <!-- Testimonials Slider -->
+    <div class="md:w-1/2 relative overflow-hidden">
+      <!-- Slides Wrapper -->
+      <div id="sliderTrack" class="flex transition-transform duration-500 ease-in-out w-full">
 
-
-
-            <div class="bg-white-50 rounded-2xl shadow p-6 max-w-sm mx-auto bg-gradient-to-r from-[#170C24] to-[#261540]">
-                <div class="flex flex-col items-center">
-              <div class="flex items-center justify-center mb-4 gap-12">
-                <img src="pics/1.png" class="w-16 h-16 mb-10">
-                  <img src="pics/c1.jpg" class="w-16 h-16 mb-10 ">
-                </div>
-              <p class="text-gray-600">“Taylor is a professional Designer he really helps my business by providing value.”</p>
-                 <div>
-                  <h4 class="font-bold text-gray-800">Tim Bailey</h4>
-                  <p class="text-sm text-gray-500">SEO Specialist, Theme Junction</p>
-                </div>
+        <!-- Slide Group 1 -->
+        <div class="w-full flex-shrink-0 px-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Testimonial 1 -->
+          <div class="bg-gradient-to-r from-[#170C24] to-[#261540] p-6 rounded-2xl shadow max-w-sm mx-auto">
+            <div class="flex flex-col items-center">
+              <div class="flex justify-center gap-4 mb-4">
+                <img src="/pics/1.png" class="w-14 h-14 rounded-full">
+                <img src="/pics/c1.jpg" class="w-14 h-14 rounded-full">
               </div>
-            </div>
-                    <div class="bg-purple-50 rounded-2xl shadow p-6 max-w-sm mx-auto bg-gradient-to-r from-[#170C24] to-[#261540]">
-                <div class="flex flex-col items-center">
-              <div class="flex items-center justify-center mb-4 gap-12">
-              <img src="pics/2.png" class="w-16 h-16 sm:w-20 sm:h-20 mb-10">
-                  <img src="pics/c2.jpg" class="w-16 h-16 mb-10 ">
-                </div>
-              <p class="text-gray-600">“Taylor is a Proffessional Designer he really helps my bussiness by providing value to my bussin”</p>
-                 <div>
-                  <h4 class="font-bold text-gray-800">Brandon Farser</h4>
-                  <p class="text-sm text-gray-500">Senior Software Dev, Cosmic Sport</p>
-                </div>
-              </div>
-            </div>
-          </div>
-         
-
-          <!-- Group 2 (Slide 2) -->
-  
-
-                 <div class="w-full h-80 grid grid-cols-1 md:grid-cols-2 gap-6 flex-shrink-0 px-2 ">
-
-            <div class="bg-white-50 rounded-2xl shadow p-6 max-w-sm mx-auto bg-gradient-to-r from-[#170C24] to-[#261540]">
-                <div class="flex flex-col items-center">
-              <div class="flex items-center justify-center mb-4 gap-12">
-                <img src="pics/1.png" class="w-16 h-16 mb-10">
-                  <img src="pics/c1.jpg" class="w-16 h-16 mb-10 ">
-                </div>
-              <p class="text-gray-600">“Taylor is a professional Designer he really helps my business by providing value.”</p>
-                 <div>
-                  <h4 class="font-bold text-gray-800">Tim Bailey</h4>
-                  <p class="text-sm text-gray-500">SEO Specialist, Theme Junction</p>
-                </div>
-              </div>
-            </div>
-        <div class="bg-purple-50 rounded-2xl shadow p-6 max-w-sm mx-auto bg-gradient-to-r from-[#170C24] to-[#261540]">
-                <div class="flex flex-col items-center">
-              <div class="flex items-center justify-center mb-4 gap-12">
-              <img src="pics/2.png" class="w-16 h-16 sm:w-20 sm:h-20 mb-10">
-
-                  <img src="pics/c2.jpg" class="w-16 h-16 mb-10 ">
-                </div>
-              <p class="text-gray-600">“Taylor is a Proffessional Designer he really helps my bussiness by providing value to my bussin”</p>
-                 <div>
-                  <h4 class="font-bold text-gray-800">Brandon Farser</h4>
-                  <p class="text-sm text-gray-500">Senior Software Dev, Cosmic Sport</p>
-                </div>
-              </div>
+              <p class="text-white/80 text-center text-sm sm:text-base mb-3">
+                “Taylor is a professional designer. He really helps my business by providing value.”
+              </p>
+              <h4 class="text-white font-bold">Tim Bailey</h4>
+              <p class="text-sm text-gray-400">SEO Specialist, Theme Junction</p>
             </div>
           </div>
 
-          <!-- Group 3(Slide 3) -->
-          <div class="w-full h-80 grid grid-cols-1 md:grid-cols-2 gap-6 flex-shrink-0 px-2 ">
-            <div class="bg-white-50 rounded-2xl shadow p-6 max-w-sm bg-gradient-to-r from-[#170C24] to-[#261540] mx-auto">
-                <div class="flex flex-col items-center">
-              <div class="flex items-center justify-center mb-4 gap-12">
-                <img src="pics/1.png" class="w-16 h-16 mb-10">
-                  <img src="pics/c1.jpg" class="w-16 h-16 mb-10 ">
-                </div>
-              <p class="text-gray-600">“Taylor is a professional Designer he really helps my business by providing value.”</p>
-                 <div>
-                  <h4 class="font-bold text-gray-800">Tim Bailey</h4>
-                  <p class="text-sm text-gray-500">SEO Specialist, Theme Junction</p>
-                </div>
+          <!-- Testimonial 2 -->
+          <div class="bg-gradient-to-r from-[#170C24] to-[#261540] p-6 rounded-2xl shadow max-w-sm mx-auto">
+            <div class="flex flex-col items-center">
+              <div class="flex justify-center gap-4 mb-4">
+                <img src="/pics/2.png" class="w-14 h-14 rounded-full">
+                <img src="/pics/c2.jpg" class="w-14 h-14 rounded-full">
               </div>
-            </div>
-
-        <div class="bg-purple-50 rounded-2xl shadow p-6 bg-gradient-to-r from-[#170C24] to-[#261540] max-w-sm mx-auto">
-                <div class="flex flex-col items-center">
-              <div class="flex items-center justify-center mb-4 gap-12">
-          <img src="pics/2.png" class="w-16 h-16 sm:w-20 sm:h-20 mb-10">
-
-                  <img src="pics/c2.jpg" class="w-16 h-16 mb-10 ">
-                </div>
-              <p class="text-gray-600">“Taylor is a Proffessional Designer he really helps my bussiness by providing value to my bussin”</p>
-                 <div>
-                  <h4 class="font-bold text-gray-800">Brandon Farser</h4>
-                  <p class="text-sm text-gray-500">Senior Software Dev, Cosmic Sport</p>
-                </div>
-              </div>
+              <p class="text-white/80 text-center text-sm sm:text-base mb-3">
+                “Taylor is a professional designer. He really helped my business grow with value-driven work.”
+              </p>
+              <h4 class="text-white font-bold">Brandon Farser</h4>
+              <p class="text-sm text-gray-400">Senior Software Dev, Cosmic Sport</p>
             </div>
           </div>
-
-
         </div>
+
+        <!-- Slide Group 2 -->
+        <div class="w-full flex-shrink-0 px-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Testimonial 3 -->
+          <div class="bg-gradient-to-r from-[#170C24] to-[#261540] p-6 rounded-2xl shadow max-w-sm mx-auto">
+            <div class="flex flex-col items-center">
+              <div class="flex justify-center gap-4 mb-4">
+                <img src="/pics/1.png" class="w-14 h-14 rounded-full">
+                <img src="/pics/c1.jpg" class="w-14 h-14 rounded-full">
+              </div>
+              <p class="text-white/80 text-center text-sm sm:text-base mb-3">
+                “Amazing experience working with Taylor. Highly recommend him.”
+              </p>
+              <h4 class="text-white font-bold">Taylor Swift</h4>
+              <p class="text-sm text-gray-400">UX Consultant</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 4 -->
+          <div class="bg-gradient-to-r from-[#170C24] to-[#261540] p-6 rounded-2xl shadow max-w-sm mx-auto">
+            <div class="flex flex-col items-center">
+              <div class="flex justify-center gap-4 mb-4">
+                <img src="/pics/2.png" class="w-14 h-14 rounded-full">
+                <img src="/pics/c2.jpg" class="w-14 h-14 rounded-full">
+              </div>
+              <p class="text-white/80 text-center text-sm sm:text-base mb-3">
+                “Creative, smart, and always delivers quality work on time.”
+              </p>
+              <h4 class="text-white font-bold">Sam Wilson</h4>
+              <p class="text-sm text-gray-400">Product Manager</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slide Group 3 -->
+        <div class="w-full flex-shrink-0 px-2 grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <!-- Testimonial 5 -->
+          <div class="bg-gradient-to-r from-[#170C24] to-[#261540] p-6 rounded-2xl shadow max-w-sm mx-auto">
+            <div class="flex flex-col items-center">
+              <div class="flex justify-center gap-4 mb-4">
+                <img src="/pics/1.png" class="w-14 h-14 rounded-full">
+                <img src="/pics/c1.jpg" class="w-14 h-14 rounded-full">
+              </div>
+              <p class="text-white/80 text-center text-sm sm:text-base mb-3">
+                “Superb web developer with attention to detail.”
+              </p>
+              <h4 class="text-white font-bold">Michael Lee</h4>
+              <p class="text-sm text-gray-400">Marketing Strategist</p>
+            </div>
+          </div>
+
+          <!-- Testimonial 6 -->
+          <div class="bg-gradient-to-r from-[#170C24] to-[#261540] p-6 rounded-2xl shadow max-w-sm mx-auto">
+            <div class="flex flex-col items-center">
+              <div class="flex justify-center gap-4 mb-4">
+                <img src="/pics/2.png" class="w-14 h-14 rounded-full">
+                <img src="/pics/c2.jpg" class="w-14 h-14 rounded-full">
+              </div>
+              <p class="text-white/80 text-center text-sm sm:text-base mb-3">
+                “Loved working with Minahil! Highly skilled and creative.”
+              </p>
+              <h4 class="text-white font-bold">Sara Khan</h4>
+              <p class="text-sm text-gray-400">CEO, Vision Corp</p>
+            </div>
+          </div>
+        </div>
+
       </div>
 
       <!-- Dots Navigation -->
@@ -654,9 +681,9 @@
         <button class="dot w-3 h-3 rounded-full bg-gray-300" data-index="2"></button>
       </div>
     </div>
-
   </div>
 </section>
+
 
 
 <!--Blog-->
@@ -683,7 +710,7 @@
 
 <div class="group relative overflow-hidden rounded-2xl shadow-lg mx-auto max-w-sm">
 
-  <img src="pics/laptop.jpg" alt="Pic 2"
+  <img src="/pics/laptop.jpg" alt="Pic 2"
        class="w-full max-w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110">
 
   <div class="absolute inset-0  bg-opacity-40 flex items-start justify-start p-4">
@@ -695,7 +722,7 @@
       <!--Card 2 -->
 <div class="group relative overflow-hidden rounded-2xl shadow-lg mx-auto max-w-sm">
 
-  <img src="pics/working.jpg" alt="Pic 2"
+  <img src="/pics/working.jpg" alt="Pic 2"
        class="w-full max-w-full h-64 object-cover transform transition-transform duration-500 group-hover:scale-110">
 
   <div class="absolute inset-0  bg-opacity-40 flex items-start justify-start p-4">
@@ -707,7 +734,7 @@
       <!-- Card 3--> 
  <div class="group relative overflow-hidden rounded-2xl shadow-lg mx-auto max-w-sm">
 
-  <img src="pics/woman.jpg" alt="Pic 3"
+  <img src="/pics/woman.jpg" alt="Pic 3"
        class="w-full max-w-full  h-64 object-cover transform transition-transform duration-500 group-hover:scale-110">
 
   <div class="absolute inset-0 bg-opacity-40 flex items-start justify-start p-4">
@@ -716,28 +743,23 @@
     </a>
   </div>
 </div>
-
-</section> 
-
-   
+</section>
 
 
-   <!-- Contact Section -->
-    <section>
-  <div class="flex flex-col lg:flex-row-reverse gap-12 px-4 py-12 bg-black">
+     <!-- Contact Section -->
+<section class="bg-black text-white px-4 py-12">
+  <div class="max-w-7xl mx-auto flex flex-col lg:flex-row-reverse items-center gap-8">
 
-  
-  <!-- Contact Information  -->
-  <div class="w-full md:w-1/3 p-20">
-    <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
-    
-    <div class="space-y-6 ">
+    <!-- Contact Information (Right Side) -->
+    <div class="w-full lg:w-1/3 space-y-6">
+      <h3 class="text-2xl font-semibold mb-6">Contact Information</h3>
+
       <!-- Phone -->
-      <div class="flex items-left">
-        <div class="w-10 h-10 bg-purple-300 text-primary rounded-lg flex items-center justify-center mr-4 mt-1">
+      <div class="flex items-start">
+        <div class="w-10 h-10 bg-purple-300 text-black rounded-lg flex items-center justify-center mr-4">
           <i class="fas fa-phone"></i>
         </div>
-       
+        <div>
           <h4 class="font-semibold">Phone</h4>
           <p class="text-secondary">+923094080011</p>
         </div>
@@ -745,7 +767,7 @@
 
       <!-- Email -->
       <div class="flex items-start">
-        <div class="w-10 h-10 bg-purple-300 text-primary rounded-lg flex items-center justify-center mr-4 mt-1">
+        <div class="w-10 h-10 bg-purple-300 text-black rounded-lg flex items-center justify-center mr-4">
           <i class="fas fa-envelope"></i>
         </div>
         <div>
@@ -756,115 +778,97 @@
 
       <!-- Address -->
       <div class="flex items-start">
-        <div class="w-10 h-10 bg-purple-300 text-primary rounded-lg flex items-center justify-center mr-4 mt-1">
+        <div class="w-10 h-10 bg-purple-300 text-black rounded-lg flex items-center justify-center mr-4">
           <i class="fas fa-map-marker-alt"></i>
         </div>
         <div>
           <h4 class="font-semibold">Address</h4>
-          <p class="text-secondary">Pasrur,Sailkot,Pakistan</p>
+          <p class="text-secondary">Pasrur, Sialkot, Pakistan</p>
         </div>
       </div>
     </div>
-  
 
-  <!-- Send Message -->
-<div class="w-full md:w-1/2 bg-gradient-to-r from-[#170C24] to-[#261540]  ml-8 p-4"> 
- 
-  
-  <div class="text-center mb-10">
-    <h2 class="text-2xl md:text-3xl font-bold text-purple-300 mb-3">Let's Work Together!</h2>
-    <p class="text-secondary max-w-2xl text-sm">I design and code beautifully simple things and I love what I do. Just simple like that!</p>
-   
+    <!-- Send Message (Left Side) -->
+    <div class="w-full lg:w-2/3 bg-gradient-to-r from-[#170C24] to-[#261540] p-6 rounded-lg">
+      <div class="text-center mb-10">
+        <h2 class="text-2xl md:text-3xl font-bold text-purple-300 mb-3">Let's Work Together!</h2>
+        <p class="text-secondary max-w-xl mx-auto text-sm">I design and code beautifully simple things and I love what I do. Just simple like that!</p>
+      </div>
+
+      <h3 class="text-xl font-semibold mb-6 text-center">Send Message</h3>
+
+      <form class="space-y-6 text-sm">
+
+        <!-- Name Fields -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="firstName" class="block mb-1 font-medium">First Name</label>
+            <input type="text" id="firstName" class="w-full px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
+          </div>
+          <div>
+            <label for="lastName" class="block mb-1 font-medium">Last Name</label>
+            <input type="text" id="lastName" class="w-full px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
+          </div>
+        </div>
+
+        <!-- Email & Phone -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+          <div>
+            <label for="email" class="block mb-1 font-medium">Email Address</label>
+            <input type="email" id="email" class="w-full px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
+          </div>
+          <div>
+            <label for="phone" class="block mb-1 font-medium">Phone Number</label>
+            <input type="tel" id="phone" class="w-full px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
+          </div>
+        </div>
+
+        <!-- Service -->
+        <div>
+          <label for="service" class="block mb-1 font-medium">Choose Service</label>
+          <select id="service" class="w-full px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
+            <option value="">Select a service</option>
+            <option value="design">UI/UX Design</option>
+            <option value="development">Web Development</option>
+            <option value="cms">CMS Development</option>
+            <option value="api">API Integration</option>
+            <option value="redesign">Website Redesign</option>
+          </select>
+        </div>
+
+        <!-- Message -->
+        <div>
+          <label for="message" class="block mb-2 font-medium">Message</label>
+          <textarea id="message" rows="5" class="w-full px-4 py-3 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black"></textarea>
+        </div>
+
+        <!-- Submit Button -->
+        <div class="text-center">
+          <button type="submit" class="bg-purple-300 text-black px-6 py-3 rounded-md hover:bg-purple-400 transition">Send Message</button>
+        </div>
+      </form>
+    </div>
   </div>
-<div class="">
-  <h3 class="text-xl font-semibold  pl-8">Send Message</h3>
-
-  <form class="space-y-5 text-sm "> 
-    
-    <!-- Name Fields -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pl-8">
-      <div>
-        <label for="firstName" class="block mb-1 font-medium text-sm">First Name</label>
-        <input type="text" id="firstName" class="w-full md:w-1/2 px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
-      </div>
-      <div>
-        <label for="lastName" class="block mb-1 font-medium text-sm">Last Name</label>
-        <input type="text" id="lastName" class="w-full md:w-1/2 px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
-      </div>
-    </div>
-
-    <!-- Email & Phone -->
-    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 pl-8">
-      <div>
-        <label for="email" class="block mb-1 font-medium text-sm">Email Address</label>
-        <input type="text" id="email" class="w-full md:w-1/2 px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
-      </div>
-      <div>
-        <label for="phone" class="block mb-1 font-medium text-sm">Phone Number</label>
-        <input type="tel" id="phone" class="w-full md:w-1/2 px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
-      </div>
-    </div>
-    </div>
-
-    <!-- Service -->
-   <div class="pl-8">
-      <label for="service" class="block mb-1 font-medium text-sm ">Choose Service</label>
-      <select id="service" class="w-1/2 px-3 py-2 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500 text-black">
-        <option value="">Select a service</option>
-        <option value="design">UI/UX Design</option>
-        <option value="development">Web Development</option>
-        <option value="cms">CMS Development</option>
-        <option value="api">API Integration</option>
-        <option value="redesign">Website Redesign</option>
-      </select>
-    </div>
-
-
-      <div class="pl-8">
-        <label for="message" class="block mb-2 font-medium">Message</label>
-        <textarea id="message" rows="5" class="w-full md:w-1/2  px-4 py-3 border border-purple-300 rounded-md focus:outline-none focus:ring-2 focus:ring-purple-500"></textarea>
-      </div>
-
-      <button type="submit" class="bg-purple-300 text-white px-6 py-3 ml-8 rounded-md hover:bg-purple-400 transition w-3/2">Send Message</button>
-    </form>
-  </div>
-
-</div>
-
 </section>
-<!-- Dark Mode Toggle Button -->
-<button id="themeToggle"
-  class="fixed top-1/2 right-4 z-50 bg-purple-500 text-white  py-2 rounded-full shadow-lg hover:bg-purple-600 transition">
-    🌙
-</button>
 
-    <!-- Footer -->
-    <footer class="bg-dark text-white py-12">
-        <div class="container mx-auto px-6">
-            <div class="text-center">
-                <a href="#" class="text-3xl font-bold text-white">Minahil</a>
-                
-                <div class="flex justify-center space-x-6 my-8">
-                 
-            
-                        <nav class="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-10">
-                <a href="#home" class="hover:text-primary transition">Home</a>
-                <a href="#services" class="hover:text-primary transition">Services</a>
-                <a href="#portfolio" class="hover:text-primary transition">Portfolio</a>
-                <a href="#experience" class="hover:text-primary transition">Experience</a>
-                <a href="#skills" class="hover:text-primary transition">Skills</a>
-                <a href="#blogs" class="hover:text-primary transition">Blogs</a>
+<!-- Footer -->
+<footer class="bg-black text-white py-8">
+  <div class="max-w-6xl mx-auto px-4 text-center">
+    <a href="#" class="text-3xl font-bold text-white">Minahil</a>
 
+    <div class="flex flex-wrap justify-center gap-6 my-6">
+      <a href="#home" class="hover:text-purple-300 transition">Home</a>
+      <a href="#services" class="hover:text-purple-300 transition">Services</a>
+      <a href="#portfolio" class="hover:text-purple-300 transition">Portfolio</a>
+      <a href="#experience" class="hover:text-purple-300 transition">Experience</a>
+      <a href="#skills" class="hover:text-purple-300 transition">Skills</a>
+      <a href="#blogs" class="hover:text-purple-300 transition">Blogs</a>
+    </div>
 
-               
-            </nav>
-                </div>
-                
-                <p class="text-gray-400">© 2024 All rights reserved by MinahilBilal</p>
-            </div>
-        </div>
-    </footer>
-
+    <p class="text-gray-400 text-sm">© 2024 All rights reserved by MinahilBilal</p>
+  </div>
+</footer>
+   
     <script>
         // Simple smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -992,9 +996,3 @@ window.addEventListener("DOMContentLoaded", () => {
     </script>
 </body>
 </html>
-
-
-
-
-
-
